@@ -1,0 +1,34 @@
+<div>
+  <div class="inline-flex justify-content-center gap">
+    <div>
+      <h4>Escolha uma cidade:</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <mat-select [(ngModel)]="selectedCity" (selectionChange)="addStopCity()">
+          <mat-option [value]="city" *ngFor="let city of cities;">{{city}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div *ngIf="index > 0" class="inline-flex justify-content-center flex-end gap">
+      <div>
+        <h4>Produtos para entregar:</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>Produtos</mat-label>
+          <mat-select [disabled]="!selectedCity" [(ngModel)]="selectedProduct">
+            <mat-option [value]="product" *ngFor="let product of products;">{{product.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="quantityProduct">
+          <mat-label>Quantidade</mat-label>
+          <input [disabled]="!selectedCity" [(ngModel)]="selectedProductQuantity" type="number" matInput>
+        </mat-form-field>
+      </div>
+      <button class="addProductButton" [disabled]="!selectedCity" (click)="addCityProduct()">Adicionar produto</button>
+      <div *ngIf="selectedCity">
+        <h6 *ngFor="let product of cityAndProducts.products">{{product.quantity}} x {{product.name}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

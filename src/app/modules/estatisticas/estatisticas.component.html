@@ -1,0 +1,16 @@
+<h2>Dados estatísticos</h2>
+<div>
+  <div *ngFor="let statistic of statistics">
+    <div *ngFor="let route of statistic.citiesRoute">
+      <h4>{{route.firstCity}} -> {{route.lastCity}}: custo: {{route.cost}}</h4>
+    </div>
+    <h5>Custo total: {{statistic.totalCost}}</h5>
+    <h5>Total de KM: {{statistic.totalKm}}</h5>
+    <h5>Total de caminhões: {{statistic.totalTrucks}}</h5>
+    <h5>Total de produtos: {{statistic.totalProducts}}</h5>
+    <h5>Total de peso: {{statistic.totalWeight}}</h5>
+    <h5>Custo médio do KM: {{statistic.averageKmCost}}</h5>
+    <hr>
+    <br>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.brand {
+  width: 100%;
+  height: 80px;
+  background-color: #FC2947;
+  color: #ffffff;
+}
+
+.brand h2 {
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+}
+
+.navbar-item {
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 13pt;
+  background-color: #ffffff;
+}
+
+.navbar-item:hover {
+  background-color: #f1f0f3;
+}

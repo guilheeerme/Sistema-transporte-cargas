@@ -1,0 +1,38 @@
+<h2>Consulta trecho-modalidade</h2>
+<div class="inline-flex justify-content-center gap">
+  <div>
+    <h4>Escolha um ponto de partida:</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Cidade</mat-label>
+      <mat-select [(ngModel)]="firstCity">
+        <mat-option [value]="city" *ngFor="let city of cities;">{{city}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <h4>Escolha um ponto de chegada:</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Cidade</mat-label>
+      <mat-select [(ngModel)]="lastCity">
+        <mat-option [value]="city" *ngFor="let city of cities;">{{city}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <h4>Escolha o tipo de caminhão:</h4>
+    <mat-form-field appearance="fill">
+      <mat-label>Caminhão</mat-label>
+      <mat-select [(ngModel)]="truckType">
+        <mat-option value="Pequeno">Pequeno porte (até 1t)</mat-option>
+        <mat-option value="Médio">Médio porte (até 4t)</mat-option>
+        <mat-option value="Grande">Grande porte (até 10t)</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<div class="mg-bottom-30">
+  <button (click)="calcRoute()">Consultar valores</button>
+</div>
+<div *ngIf="calcRouteModel">
+  <h3>De {{firstCity}} para {{lastCity}} utilizando um caminhão {{truckType}}, a distância é de {{calcRouteModel.quantityKm}}km e o custo será de R$ {{calcRouteModel.totalCost}}</h3>
+</div>

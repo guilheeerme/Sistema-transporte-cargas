@@ -1,0 +1,83 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body { font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f1f0f3; }
+
+html, body { height: 100%; }
+
+.container {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: auto;
+  padding: 30px;
+  min-height: 400px;
+}
+
+/* display fex */
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.gap {
+  gap: 20px;
+}
+
+/* margins */
+
+.mg-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.mg-bottom-15 {
+  margin-bottom: 15px;
+}
+
+.mg-left-30 {
+  margin-left: 30px;
+}
+
+/* button */
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+.addProductButton {
+  max-height: 50px;
+  position: relative;
+  bottom: 20px;
+}
+
+.calcTransportValuesButton {
+  background-color: #c9c9c9;
+}
+
+.calcTransportValuesButton:hover {
+  background-color: #a8a8a8;
+}
+
+/* Extras */
+
+.quantityProduct {
+  position: relative;
+  bottom: 2px
+}
